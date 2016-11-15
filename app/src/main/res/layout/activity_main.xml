@@ -5,24 +5,73 @@
     android:layout_height="match_parent"
     >
     <RelativeLayout
+        android:id="@+id/top"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         >
         <Button
-            android:id="@+id/gusee"
+            android:id="@+id/guess"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Guess"
             android:layout_alignParentRight="true"
+            android:onClick="guess"
             />
         <EditText
+            android:id="@+id/input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:layout_toLeftOf="@id/gusee"
-            android:layout_alignTop="@id/gusee"
-            android:layout_alignBottom="@id/gusee"
+            android:layout_toLeftOf="@id/guess"
+            android:layout_alignTop="@id/guess"
+            android:layout_alignBottom="@id/guess"
             />
     </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        >
+        <Button
+            android:id="@+id/restart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Restart"
+            android:onClick="restart"
+            />
+        <Button
+            android:id="@+id/setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Setting"
+            />
+        <Button
+            android:id="@+id/exit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Exit"
+            android:onClick="exit"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/mesg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ff0"
+        android:layout_below="@id/top"
+        android:layout_above="@id/bottom"
+        android:textSize="24sp"
+        android:textColor="#f00"
+        android:textStyle="bold|italic"
+        />
+
 </RelativeLayout>
